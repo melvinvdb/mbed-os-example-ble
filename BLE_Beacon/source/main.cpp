@@ -18,6 +18,7 @@
 #include <mbed.h>
 #include "ble/BLE.h"
 #include "pretty_printer.h"
+#include <string>
 
 static events::EventQueue event_queue(/* event count */ 16 * EVENTS_EVENT_SIZE);
 
@@ -38,6 +39,9 @@ public:
         _ble.gap().setEventHandler(this);
 
         _ble.init(this, &BeaconDemo::on_init_complete);
+
+        std::string test = "Advertisement started!";
+        printf(test.c_str());
 
         _event_queue.dispatch_forever();
     }

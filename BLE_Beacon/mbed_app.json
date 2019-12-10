@@ -16,7 +16,18 @@
             "target.features_add": ["BLE"]
         },
         "NRF52_DK": {
-            "target.features_add": ["BLE"]
+            "target.features_add": ["BLE"],
+            "target.extra_labels_add": [
+                "SOFTDEVICE_COMMON",
+                "SOFTDEVICE_S132_FULL",
+                "NORDIC_SOFTDEVICE"
+            ],
+            "target.extra_labels_remove": [
+                "CORDIO",
+                "CORDIO_LL",
+                "SOFTDEVICE_NONE",
+                "NORDIC_CORDIO"
+            ]
         }
     }
 }
